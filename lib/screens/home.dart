@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     builder: (context, snapshot) {
                       print(snapshot.data!.length);
                       return ListView.separated(
-                        separatorBuilder: (context,index){
+                        itemBuilder: (context,index){
                           return  Row(
                               children: [
                                 Text((index+1).toString(),style: TextStyle(fontSize: 20,color: Colors.white),),
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             );
                            },
                           itemCount: snapshot.data!.length,
-                          itemBuilder: (context, index) {
+                          separatorBuilder: (context, index) {
                             return SizedBox(height: 20,);
                           });
                     }),

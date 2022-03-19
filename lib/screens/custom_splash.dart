@@ -38,6 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            
               CircularProgressIndicator(
                 color: Colors.white,
               )
