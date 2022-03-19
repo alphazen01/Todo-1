@@ -20,8 +20,8 @@ DatabaseHelper _dbHelper=DatabaseHelper();
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-    title: Text("alert"),
-    content: Text("This the body of alert dialog"),
+    title: Text("Are you sure?"),
+    content: Text("You want to delete this task permanently"),
     actions: [
         TextButton(
          onPressed: () async {

@@ -24,7 +24,7 @@ class _TaskPageState extends State<TaskPage> {
   TextEditingController descriptionEditingController = TextEditingController();
 
   int customerId = 0;
-  Random random = Random();
+
   @override
   void initState() {
   
@@ -85,16 +85,11 @@ class _TaskPageState extends State<TaskPage> {
                     style: TextStyle(fontSize: 20, color: Color(0xff211551)),
                   ),
                 ),
-                // Expanded(
-                //   child: SizedBox()
-                //   ),
-                
               ],
             ),
           ),
         ),
         floatingActionButton: Row(
-          
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
               SizedBox(
@@ -104,16 +99,12 @@ class _TaskPageState extends State<TaskPage> {
                      primary: Color(0xff7349FE),
                         shape:RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)
-                        ) 
-                        
+                        )  
                       ) ,
                       onPressed: () async {
                         setState(() {
-                          print("data has been created");
-                          //  Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()));
                         });
                         final customer = CustomerModel(
-                          id: random.nextInt(100),
                           title: titleEditingController.text,
                           description: descriptionEditingController.text,
                         );
@@ -131,7 +122,6 @@ class _TaskPageState extends State<TaskPage> {
                       shape:RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)
                       ) 
-                      
                     ) ,
                     onPressed:() async{
                       final customer = CustomerModel(
