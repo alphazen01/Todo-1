@@ -104,13 +104,27 @@ class _TaskPageState extends State<TaskPage> {
                       onPressed: () async {
                         setState(() {
                         });
-                        final customer = CustomerModel(
+                        if (widget.customer==null) {
+                           final customer = CustomerModel(
                           title: titleEditingController.text,
                           description: descriptionEditingController.text,
                         );
                         await DatabaseHelper.instance.insertTask(customer);
                         Navigator.pop(context);
                         widget.rebuild();
+                        print("Done");
+                        } else {
+                          print("Can not save");
+                        }
+
+
+                        // final customer = CustomerModel(
+                        //   title: titleEditingController.text,
+                        //   description: descriptionEditingController.text,
+                        // );
+                        // await DatabaseHelper.instance.insertTask(customer);
+                        // Navigator.pop(context);
+                        // widget.rebuild();
                       },
                       child: Text("Save"),
                    ),
